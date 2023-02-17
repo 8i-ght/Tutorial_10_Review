@@ -27,11 +27,13 @@ for (var i = 0; i < eventDates.length; i++) {
    if ((thisDay <= eventDate) && (eventDate <= endDate)) {
       tableHTML += "<tr>";
       tableHTML += "<td>" + eventDay + " @ " + eventTime + "</td>";
-      tableHTML += "<td>" + description + "</td>";
-      tableHTML += "<td>" + price + "</td>";
-      tableHTML += ""
+      tableHTML += "<td>" + eventDescriptions[i] + "</td>";
+      tableHTML += "<td>" + eventPrices[i] + "</td>";
       tableHTML += "</tr>";
       
    }
 }
 
+tableHTML += "</table>";
+
+document.getElementById("eventList").innerHTML = tableHTML;
